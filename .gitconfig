@@ -1,0 +1,8 @@
+[user]
+	name = Sanjay Zhang
+	email = zhangsj_hit@outlook.com
+	;email = vulgar@chorus.com
+[http]
+[http]
+[http]
+	proxy = http://127.0.0.1:6666
