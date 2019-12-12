@@ -1,0 +1,31 @@
+{
+    "window.zoomLevel": 1,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["J", "K"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "python.pythonPath": "C:\\Users\\80759\\Anaconda3\\envs\\pyqt\\python.exe",
+  "python.jediEnabled": false,
+  "workbench.colorTheme": "tasmDark",
+  "vim.cursorStylePerMode.normal": "block",
+  "explorer.confirmDragAndDrop": false,
+  "breadcrumbs.enabled": true,
+  "editor.minimap.enabled": false,
+  "explorer.confirmDelete": false,
+  "[python]": {
+        
+    },
+}
