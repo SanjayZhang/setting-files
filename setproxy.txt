@@ -1,0 +1,16 @@
+set http_proxy=http://127.0.0.1:1088
+set https_proxy=http://127.0.0.1:1088
+
+set http_proxy_user=user
+set http_proxy_pass=pass
+
+set https_proxy_user=user
+set https_proxy_pass=pass
+
+# 恢复
+set http_proxy=
+
+set https_proxy=
+
+# Ubuntu 下命令为 export
+# export http_proxy=http://127.0.0.1:1080
