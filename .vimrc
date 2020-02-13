@@ -4,6 +4,7 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
+Plugin 'preservim/nerdcommenter'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-scripts/vim-auto-save'
 " bundle header end
@@ -53,12 +54,6 @@ nnoremap <leader>s :mksession<CR>
 " edit vimrc and load vimrc bindings
 nnoremap <leader>vr :vsp ~/.vimrc<CR>
 nnoremap <leader>svr :source ~/.vimrc<CR>
-
-call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdcommenter'
-"Plug 'pseewald/vim-anyfold'
-"Plug 'Yggdroot/indentLine'
-call plug#end()
 
 nnoremap <leader>.  :w<CR>
 nnoremap <leader>.. :wa<CR>
