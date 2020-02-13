@@ -13,7 +13,7 @@ z
 )
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/shengjie/.oh-my-zsh"
+export ZSH="~/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -209,9 +209,9 @@ alias win7='/usr/lib/virtualbox/VirtualBoxVM --comment "win7" --startvm "{4a87ec
      eval "$__conda_setup"
  else
      if [ -f "/home/shengjie/anaconda3/etc/profile.d/conda.sh" ]; then
-     ¦   . "/home/shengjie/anaconda3/etc/profile.d/conda.sh"
+         . "/home/shengjie/anaconda3/etc/profile.d/conda.sh"
      else
-     ¦   export PATH="/home/shengjie/anaconda3/bin:$PATH"
+         export PATH="/home/shengjie/anaconda3/bin:$PATH"
      fi
  fi
  unset __conda_setup
@@ -220,6 +220,3 @@ alias win7='/usr/lib/virtualbox/VirtualBoxVM --comment "win7" --startvm "{4a87ec
 
  alias tips="cd ~/tips"
  alias settings="cd ~/settings"
-
- alias g2="cd ~/osexp2"
-g2
