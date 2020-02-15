@@ -13,7 +13,7 @@ z
 )
 
 # Path to your oh-my-zsh installation.
-export ZSH="~/.oh-my-zsh"
+export ZSH="/home/shengjie/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -120,6 +120,9 @@ export linux='/home/shengjie/Documents/linuxLearning'
 alias linux="cd $linux"
 export JAVA_HOME='/usr/lib/jvm/jdk1.8.0_201'
 export PATH=${PATH}:${JAVA_HOME}/bin
+export PATH=${PATH}:/home/shengjie/opt
+
+
 export PATH="$PATH:/opt/mssql-tools/bin"
 export PATH=${PATH}:~/opt/android-studio/bin
 export PATH=${PATH}:~/opt/
@@ -190,15 +193,12 @@ alias m='make --no-print-directory'
 alias mc="make clean"
 alias q='exit'
 
-alias py='python'
+alias py='python3'
 
-alias gl='glances -1'
 alias dos='cd ~/dos'
 alias dosconfig="vim ~/.dosbox/dosbox-0.74.conf"
 alias v="vim *.asm"
 alias vt="cd ~/dos/test && vim c.asm"
-
-alias -g gp='| grep -i' #creates a global alias for grep
 
 alias win7='/usr/lib/virtualbox/VirtualBoxVM --comment "win7" --startvm "{4a87ec91-35cb-4674-b2e3-4dd0f5ef66fb}"'
 
@@ -216,7 +216,21 @@ alias win7='/usr/lib/virtualbox/VirtualBoxVM --comment "win7" --startvm "{4a87ec
  fi
  unset __conda_setup
  # <<< conda initialize <<<
- alias ipy='ipython'
 
- alias tips="cd ~/tips"
- alias settings="cd ~/settings"
+alias ipy='ipython'
+
+alias tips="cd ~/tips"
+alias settings="cd ~/settings"
+
+alias plantuml_run='/home/shengjie/opt/apache-tomcat-8.5.49/bin/startup.sh'
+alias plantuml_stop='/home/shengjie/opt/apache-tomcat-8.5.49/bin/shutdown.sh'
+alias jpn='jupyter notebook'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# pass: 51bjb...vul..
+export singapore="139.180.140.12"
+export singapore2="139.180.130.72"
+
