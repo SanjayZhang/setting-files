@@ -1,6 +1,8 @@
-vim
 vundle
-tmux
-zsh
+oh my tmux, zsh
 
+git config credential.helper store
+
+# VirtualBox
+sudo apt install virtualbox virtualbox-ext-pack virtualbox-guest-additions-iso
 

@@ -1,0 +1,91 @@
+{
+    "inbounds": [
+        {
+            "port": 1088, // SOCKS 代理端口，在浏览器中需配置代理并指向这个端口
+            "listen": "127.0.0.1",
+            "protocol": "socks",
+            "settings": {
+                "udp": true,
+                "auth": "noauth"
+            },
+              "sniffing": {
+                "enabled": true,
+                "destOverride": ["http", "tls"]
+              }
+        }
+        ,
+        {
+            "port": 6666,
+            "listen": "127.0.0.1",
+            "protocol": "http",
+            "settings": {
+                "udp": true,
+                "auth": "noauth"
+            },
+              "sniffing": {
+                "enabled": true,
+                "destOverride": ["http", "tls"]
+              }
+        }
+    ],
+
+    "outbounds": [
+        {
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        //"address": "103.126.100.35", // 服务器地址，请修改为你自己的服务器 ip 或域名
+                        "address": "139.180.140.12", // 服务器地址，请修改为你自己的服务器 ip 或域名
+                        "port": 26432, // 服务器端口
+                        "users": [
+                            {
+                                "id": "512402a4-295e-46be-83ce-488ef0d66298",
+                                //"id": "0b08d593-3578-449c-8c17-71fe86c6592e",
+				"alterId": 24
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "protocol": "freedom",
+            "tag": "direct",
+            "settings": {}
+        }
+        ,{
+            "protocol": "blackhole",
+            "tag": "adblock",
+            "settings": {}
+        }
+    ],
+    
+  "routing": {
+    "domainStrategy": "IPOnDemand",
+    "rules": [
+      //{
+       // "type": "field",
+        //"domain": [
+           // "geosite:category-ads"
+        //],
+       // "outboundTag": "adblock"       
+      //},
+      {
+        "type": "field",
+        "outboundTag": "direct",
+        "domain": ["geosite:cn"]
+      },
+      {
+        "type": "field",
+        "outboundTag": "direct",
+        "ip": [
+          "geoip:cn",
+          "geoip:private"
+        ]
+      }
+    ]
+  }
+    
+}
+
