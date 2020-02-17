@@ -1,7 +1,14 @@
-vundle
+----------------------- VPS -------------------------------------
+git clone settings, tips
+
+vim, vundle, PLUGINS
 oh my tmux, zsh
 
+git config file
 git config credential.helper store
+
+
+----------------------- Host OS---------------------------------
 
 # VirtualBox
 sudo apt install virtualbox virtualbox-ext-pack virtualbox-guest-additions-iso
