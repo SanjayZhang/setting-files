@@ -13,7 +13,7 @@ z
 )
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/shengjie/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -121,11 +121,14 @@ alias linux="cd $linux"
 export JAVA_HOME='/usr/lib/jvm/jdk1.8.0_201'
 export PATH=${PATH}:${JAVA_HOME}/bin
 export PATH=${PATH}:/home/shengjie/opt
+export PATH="/home/shengjie/opt/anaconda3/bin:$PATH"
 
 
 export PATH="$PATH:/opt/mssql-tools/bin"
 export PATH=${PATH}:~/opt/android-studio/bin
 export PATH=${PATH}:~/opt/
+
+export scripts=~/opt/bin
 
 
 export jabref='~/opt/JabRef-4.3.1.jar'
@@ -133,7 +136,7 @@ alias jabref="java -jar $jabref"
 export v2ray='/usr/bin/v2ray/v2ray'
 alias v2ray='$v2ray -config /etc/v2ray/config.json'
 
-export thin='/mnt/storage/vm/thin'
+export thin='/home/shengjie/opt/thin'
 alias thin='cd $thin'
 
 alias zr='vim ~/.zshrc'
@@ -204,14 +207,14 @@ alias win7='/usr/lib/virtualbox/VirtualBoxVM --comment "win7" --startvm "{4a87ec
 
  # >>> conda initialize >>>
  # !! Contents within this block are managed by 'conda init' !!
- __conda_setup="$('/home/shengjie/anaconda3/bin/conda' 'shell.bash' 'hook' 2>     /dev/null)"
+ __conda_setup="$('/home/shengjie/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2>     /dev/null)"
  if [ $? -eq 0 ]; then
      eval "$__conda_setup"
  else
-     if [ -f "/home/shengjie/anaconda3/etc/profile.d/conda.sh" ]; then
-         . "/home/shengjie/anaconda3/etc/profile.d/conda.sh"
+     if [ -f "/home/shengjie/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+         . "/home/shengjie/opt/anaconda3/etc/profile.d/conda.sh"
      else
-         export PATH="/home/shengjie/anaconda3/bin:$PATH"
+         export PATH="/home/shengjie/opt/anaconda3/bin:$PATH"
      fi
  fi
  unset __conda_setup
@@ -230,7 +233,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# pass: 51bjb...vul..
-export singapore="139.180.140.12"
-export singapore2="139.180.130.72"
+export xiangyang="111.177.32.158"
+export gia="103.126.100.35"
 
+alias his='history'
+
+export opt='/home/shengjie/opt'
+alias opt="cd $opt"
+
+alias bywave="~/opt/ByWave.AppImage"
