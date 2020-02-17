@@ -6,3 +6,12 @@ git config credential.helper store
 # VirtualBox
 sudo apt install virtualbox virtualbox-ext-pack virtualbox-guest-additions-iso
 
+# python3
+intatll anaconda3
+conda config --set auto_activate_base false
+
+# python2.7
+sudo apt install python2.7 python-pip
+
+# unrar
+sudo apt-get install unrar
