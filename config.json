@@ -13,20 +13,20 @@
                 "destOverride": ["http", "tls"]
               }
         }
-        ,
-        {
-            "port": 6666,
-            "listen": "127.0.0.1",
-            "protocol": "http",
-            "settings": {
-                "udp": true,
-                "auth": "noauth"
-            },
-              "sniffing": {
-                "enabled": true,
-                "destOverride": ["http", "tls"]
-              }
-        }
+        // ,
+        // {
+        //     "port": 6666,
+        //     "listen": "127.0.0.1",
+        //     "protocol": "http",
+        //     "settings": {
+        //         "udp": true,
+        //         "auth": "noauth"
+        //     },
+        //       "sniffing": {
+        //         "enabled": true,
+        //         "destOverride": ["http", "tls"]
+        //       }
+        // }
     ],
 
     "outbounds": [
@@ -35,8 +35,9 @@
             "settings": {
                 "vnext": [
                     {
-                        //"address": "103.126.100.35", // 服务器地址，请修改为你自己的服务器 ip 或域名
-                        "address": "139.180.140.12", // 服务器地址，请修改为你自己的服务器 ip 或域名
+                        "address": "103.126.100.35", // pesyun us
+                        // "address": "111.177.32.158", // pesyun, xinagyang 
+                        // "address": "139.180.140.12", // vultr, sg 
                         "port": 26432, // 服务器端口
                         "users": [
                             {
@@ -59,18 +60,19 @@
             "tag": "adblock",
             "settings": {}
         }
-    ],
+    ]
     
+  ,
   "routing": {
     "domainStrategy": "IPOnDemand",
     "rules": [
-      //{
-       // "type": "field",
-        //"domain": [
-           // "geosite:category-ads"
-        //],
-       // "outboundTag": "adblock"       
-      //},
+      // {
+      //  "type": "field",
+      //   "domain": [
+      //      "geosite:category-ads"
+      //   ],
+      //  "outboundTag": "adblock"       
+      // },
       {
         "type": "field",
         "outboundTag": "direct",
