@@ -144,8 +144,8 @@ alias szr='source ~/.zshrc'
 alias ll='ls -lhF'
 
 # DIRS
-export  dd="~/Downloads" 
-alias   dd="cd $dd"
+export  ddd="~/Downloads" 
+alias   ddd="cd $ddd"
 export  tmp="~/tmp"
 alias   tmp="cd $tmp"
 
@@ -154,13 +154,13 @@ alias cdd='cd ..'
 proxy()
 {
     if [ -z "$1"  ]; then
-        export proxy='socks5://127.0.0.1:1088'
-        export http_proxy='socks5://127.0.0.1:1088'
-        export https_proxy='socks5://127.0.0.1:1088'
+        export proxy='socks5://127.0.0.1:1080'
+        export http_proxy='socks5://127.0.0.1:1080'
+        export https_proxy='socks5://127.0.0.1:1080'
     elif [ "$1" = t ]; then
-        export proxy='socks5://127.0.0.1:1088'
-        export http_proxy='socks5://127.0.0.1:1088'
-        export https_proxy='socks5://127.0.0.1:1088'
+        export proxy='socks5://127.0.0.1:1080'
+        export http_proxy='socks5://127.0.0.1:1080'
+        export https_proxy='socks5://127.0.0.1:1080'
         echo "baidu:"
         curl baidu.com > /dev/zero
         echo "google:"
@@ -242,3 +242,5 @@ export opt='/home/shengjie/opt'
 alias opt="cd $opt"
 
 alias bywave="~/opt/ByWave.AppImage"
+alias pow="watch -n 2 'upower -i `upower -e | grep 'BAT'` | grep energy-rat'"
+alias gcred='git config credential.helper store'

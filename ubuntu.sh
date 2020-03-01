@@ -40,9 +40,9 @@ cp settings/.tmux.conf.local .
 chown -R $(logname):$(logname) .tmux*
 
 
-# Zsh
-check_and_install zsh
-curl -Lo install.sh https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
-
 # git
 cp settings/.gitconfig .
+
+# Zsh
+check_and_install zsh curl
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
