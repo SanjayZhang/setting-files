@@ -1,33 +1,17 @@
 // Place your key bindings in this file to override the defaults
 [
     // Terminal Panel
-    {
-        "key": "ctrl+`",
-        "command": "workbench.action.terminal.focus",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+`",
-        "command": "workbench.action.focusActiveEditorGroup",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "alt+`",
-        "command": "workbench.action.terminal.toggleTerminal"
-    },
-    { 
-        "key": "ctrl+shift+j", 
-        "command": "workbench.action.terminal.focusNext" 
-    },
-    // Toggle Panel Location
-    {
-        "key": "alt+p",
-        "command": "workbench.action.togglePanelPosition"
-    },
-    {
-        "key": "ctrl+shift+k",
-        "command": "workbench.action.terminal.focusPrevious"
-    },
+    [
+        {
+            "key": "ctrl+right",
+            "command": "workbench.action.positionPanelRight"
+        },
+        {
+            "key": "ctrl+down",
+            "command": "workbench.action.positionPanelBottom"
+        }
+       
+    ],
     // Overwrite Vim Ctrl-W
     // {
     //     "key": "ctrl+w",

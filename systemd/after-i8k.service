@@ -1,0 +1,8 @@
+[Unit]
+Description=Set fan speed to 0
+
+[Service]
+ExecStart=/usr/bin/i8kctl fan 0 0
+
+[Install]
+WantedBy=multi-user.target

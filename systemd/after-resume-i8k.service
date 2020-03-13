@@ -1,0 +1,11 @@
+[Unit]
+Description=Set fan speed after resume.
+After=suspend.target hibernate.target hybrid-sleep.target
+
+[Service]
+ExecStart=/usr/bin/i8kctl fan 0 0
+#User=my_user_name
+#Environment=DISPLAY=:0
+
+[Install]
+WantedBy=suspend.target hibernate.target hybrid-sleep.target
