@@ -47,3 +47,4 @@ cp settings/.gitconfig .
 # Zsh
 check_and_install zsh curl
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
