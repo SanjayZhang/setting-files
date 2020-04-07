@@ -27,6 +27,7 @@ chown -R $(logname):$(logname) tips
 # Vim, Vundle, Plugins
 check_and_install vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+cp settings/.vimrc .
 vim +PluginInstall +qall
 
 
