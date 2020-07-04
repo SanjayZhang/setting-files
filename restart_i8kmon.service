@@ -1,0 +1,21 @@
+[Unit]
+
+Description=Run myscripttorun
+
+After=suspend.target
+
+#After=hibernate.target
+
+#After=hybrid-sleep.target
+
+[Service]
+
+ExecStart=/etc/systemd/system/restart_i8kmon.sh
+
+[Install]
+
+WantedBy=suspend.target
+
+#WantedBy=hibernate.target
+
+#WantedBy=hybrid-sleep.target
