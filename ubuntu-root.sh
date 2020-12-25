@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
+# http_proxy port: 6666
+
 cd
+
 apt-get -y update
 apt-get -y upgrade
 
@@ -17,12 +20,18 @@ check_and_install() {
 
 check_and_install curl
 
+set http_proxy='http://127.0.0.1:6666'
+set https_proxy='http://127.0.0.1:6666'
+
 # clone settings and tips
 check_and_install git
 git clone https://github.com/SanjayZhang/settings.git
 git clone https://github.com/SanjayZhang/tips.git
 chown -R $(logname):$(logname) settings
 chown -R $(logname):$(logname) tips
+
+# git
+cp settings/.gitconfig .
 
 # Vim, Vundle, Plugins
 check_and_install vim
@@ -41,10 +50,8 @@ cp settings/.tmux.conf.local .
 chown -R $(logname):$(logname) .tmux*
 
 
-# git
-cp settings/.gitconfig .
-
 # Zsh
-check_and_install zsh curl
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
+check_and_install zsh 
+cp settings/install-oh-my-zsh.sh .
+chmod +x install-oh-my-zsh.sh
+./install-oh-my-zsh.sh
